@@ -3,9 +3,10 @@
 ### Contract Layer：合約層，放置接口（Interface）、資料模型的地方。
 
 - Model：命名空間（namespace），放置資料模型的地方。
-- Data：命名空間（namespace），定義在 Model 底下，放置
-- Infos
-- Results
+- Data：命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。
+- Infos：命名空間（namespace），放置 Logic Layer 所定義出來的方法的參數模型。
+- Results：命名空間（namespace），放置 Logic Layer 所定義出來的方法的回傳值模型。
+- ServiceResult：抽象類別，所有的回傳值模型必須是它的派生類。
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
@@ -17,6 +18,10 @@
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
 - Create
-- Insert
-- Update
-- Delete
+- Insert：執行單一插入語句。
+- MultiplyInsert：多個插入語句一同執行。
+- BulkInsert：執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。
+- Update：執行單一更新語句，依照 PK 更新一筆資料。
+- Delete：執行單一刪除語句，依照 PK 刪除一筆資料。
+- DeleteBy：過濾條件執刪除語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
+- QueryBy：執行查詢語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
