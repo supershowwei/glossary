@@ -10,10 +10,10 @@
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
-- Add
-- Get
-- Save
-- Remove
+- Add：新增
+- Get：取得
+- Save：儲存
+- Remove：移除
 
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
@@ -23,5 +23,5 @@
 - BulkInsert：執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。
 - Update：執行單一更新語句，依照 PK 更新一筆資料。
 - Delete：執行單一刪除語句，依照 PK 刪除一筆資料。
-- DeleteBy：過濾條件執刪除語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
-- QueryBy：執行查詢語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
+- DeleteBy-：過濾條件執刪除語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
+- QueryBy-：執行查詢語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
