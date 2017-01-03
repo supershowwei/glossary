@@ -28,3 +28,10 @@
 - DeleteBy-：過濾條件執刪除語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
 - QueryBy-：執行查詢語句，By 後面接著描述主要的過濾條件，描述的過濾條件必須是名詞。
 - -Config：實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。
+
+### Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
+
+- -Interceptor：欄截器
+- ExceptionInterceptor：例外狀況攔截器
+- -Aspect：側面、局面。
+- LogAspect：日誌方面，在方法執行的前後加入日誌。
