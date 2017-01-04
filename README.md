@@ -9,6 +9,7 @@
 |Infos|命名空間（namespace），放置 Logic Layer 所定義出來的方法的參數模型。|
 |Results|命名空間（namespace），放置 Logic Layer 所定義出來的方法的回傳值模型。|
 |ServiceResult|抽象類別，所有的回傳值模型必須是它的派生類。|
+|Aspects|命名空間（namespace），放置 AOP Advice 的地方。|
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
