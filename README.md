@@ -2,11 +2,13 @@
 
 ### Contract Layer：合約層，放置接口（Interface）、資料模型的地方。
 
-- Model：命名空間（namespace），放置資料模型的地方。
-- Data：命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。
-- Infos：命名空間（namespace），放置 Logic Layer 所定義出來的方法的參數模型。
-- Results：命名空間（namespace），放置 Logic Layer 所定義出來的方法的回傳值模型。
-- ServiceResult：抽象類別，所有的回傳值模型必須是它的派生類。
+|Vocabulary|   |
+|:--|:--|
+|Model|命名空間（namespace），放置資料模型的地方。|
+|Data|命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。|
+|Infos|命名空間（namespace），放置 Logic Layer 所定義出來的方法的參數模型。|
+|Results|命名空間（namespace），放置 Logic Layer 所定義出來的方法的回傳值模型。|
+|ServiceResult|抽象類別，所有的回傳值模型必須是它的派生類。|
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
