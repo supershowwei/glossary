@@ -13,12 +13,14 @@
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
-- -Service：邏輯層每個類別的結尾必定冠上 Service。
-- LookupService：查找服務，取得系統設定、靜態選項。
-- Add：新增行為
-- Get：取得行為
-- Save：儲存行為
-- Remove：移除行為
+|Vocabulary||
+|:--|:--|
+|-Service|邏輯層每個類別的結尾必定冠上 Service。|
+|LookupService|查找服務，取得系統設定、靜態選項。|
+|Add|新增行為|
+|Get|取得行為|
+|Save|儲存行為|
+|Remove|移除行為|
 
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
