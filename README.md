@@ -28,7 +28,7 @@
 |:--|:--|
 |Create|執行單一插入語句。|
 |Insert|執行單一插入語句，與 Create 相同。|
-|MultiplyInsert<br />BatchInsert|多個插入語句一同執行。|
+|BatchInsert<br />MultiplyInsert|多個插入語句一同執行。|
 |BulkInsert|執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。|
 |Update|執行單一更新語句，依照 PK 更新一筆資料。|
 |Delete|執行單一刪除語句，依照 PK 刪除一筆資料。|
@@ -38,7 +38,9 @@
 
 ### Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
 
-- -Interceptor：欄截器
-- ExceptionInterceptor：例外狀況攔截器
-- -Aspect：側面、局面。
-- LogAspect：日誌方面，在方法執行的前後加入日誌。
+|Vocabulary||
+|:--|:--|
+|-Interceptor|欄截器|
+|ExceptionInterceptor|例外狀況攔截器|
+|-Aspect|側面、局面。|
+|LogAspect|日誌方面，在方法執行的前後加入日誌。|
