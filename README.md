@@ -44,3 +44,11 @@
 |ExceptionInterceptor|例外狀況攔截器|
 |-Aspect|側面、局面。|
 |LogAspect|日誌方面，在方法執行的前後加入日誌。|
+
+### Hosting Layer：將整個 Business Model 封裝成服務的地方。
+
+|Vocabulary||
+|:--|:--|
+|Get|取得一筆資料，參數只放 Key。|
+|GetAll|取得所有資料，沒有參數。|
+|GetBy|依 Query 的條件取得資料|
