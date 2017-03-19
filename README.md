@@ -48,14 +48,17 @@
 
 ### ASP.NET MVC Action Naming Convention
 
-| Vocabulary |                                                  |
-|------------|--------------------------------------------------|
-| Index      | 主頁                                             |
-| List       | 依條件列出資料                                   |
-| ListAll    | 列出所有資料                                     |
-| Show       | 取得一筆資料                                     |
-| New        | 新增頁面                                         |
-| Edit       | 編輯頁面                                         |
-| Create     | 新增一筆資料                                     |
-| Save       | 更新一筆資料                                     |
-| Remove     | 移除一筆資料，若要依條件刪除資料就實作多載方法。 |
+| Vocabulary   | HTTP Verb |                                                  |
+|--------------|-----------|--------------------------------------------------|
+| Index        | GET       | 主頁                                             |
+| List         | GET       | 依條件列出資料，若無條件則表示全部。             |
+| Details      | GET       | 取得單筆資料                                     |
+| New          | GET       | 新增資料用的頁面                                 |
+| Create       | POST      | 新增資料用的方法                                 |
+| Edit         | GET       | 編輯資料用的頁面                                 |
+| Save         | PATCH     | 更新資料用的方法                                 |
+| Destroy      | GET       | 刪除資料用的頁面                                 |
+| Remove       | DELETE    | 移除單筆資料，若要依條件刪除資料就實作多載方法。 |
+| Login        | GET       | 登入用的頁面                                     |
+| Authenticate | POST      | 驗證使用者所送出的登入資訊                       |
+| Logout       | DELETE    | 登出                                             |
