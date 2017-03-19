@@ -27,9 +27,9 @@
 
 | Vocabulary                      |                                                                                                       |
 |---------------------------------|-------------------------------------------------------------------------------------------------------|
-| Create                          | 執行單一插入語句。                                                                                    |
-| Insert                          | 執行單一插入語句，與 Create 相同。                                                                    |
-| BatchInsert<br />MultiplyInsert | 多個插入語句一同執行。                                                                                |
+| Create                          | 建立檔案                                                                                              |
+| Insert                          | 執行單一插入語句                                                                                      |
+| BatchInsert<br />MultiplyInsert | 多個插入語句一同執行                                                                                  |
 | BulkInsert                      | 執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。                    |
 | Update                          | 執行單一更新語句，依照 PK 更新一筆資料。                                                              |
 | Delete                          | 執行單一刪除語句，依照 PK 刪除一筆資料。                                                              |
