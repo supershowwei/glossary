@@ -13,7 +13,7 @@
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
-- 依照提供服務的主體為服務名稱、方法名稱來命名，例如：`MemberService` 的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubsBy(string memberId)`，雖然乍看之下這個方法應該由 `ClubService` 提供，但是取得 Member 所參與的 Club 這件事情，Member 才是主體，所參與的 Club 只是附屬於 Member 的屬性，因此應該由 MemberService 提供該方法。
+- 依照提供服務的主體來為服務及方法命名，例如：`MemberService` 的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubsBy(string memberId)`，雖然乍看之下這個方法應該由 `ClubService` 提供，但是取得 Member 所參與的 Club 這件事情，Member 才是主體，所參與的 Club 只是附屬於 Member 的屬性，因此應該由 MemberService 提供該方法。
 - 將取得的資料加以判斷、整理、運算、轉換。
 
 | Vocabulary    |                                                                                             |
@@ -27,6 +27,10 @@
 | Remove        | 移除行為                                                                                    |
 
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
+
+- 依照實際存放資料的實體來為 DAO 及方法命名，例如：`MemberService` 提供了一個 `GetUnreadInsideMailCount(string memberId)` 方法，實際存放資料的實體是 `InsideMail` 這個資料倉儲，因此其 DAO 應命名為 `InsideMailDataAccess` 與 MemberService 形成聚合關係。
+- 禁止做資料的整理、判斷、運算、轉換，單純做接受參數、取資料、回傳資料的工作。
+- DAO 元件經常會被多個不同的 Logic Service 使用，這點在設計上需要注意。
 
 | Vocabulary                      |                                                                                                       |
 |---------------------------------|-------------------------------------------------------------------------------------------------------|
