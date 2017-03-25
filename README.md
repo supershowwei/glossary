@@ -13,6 +13,9 @@
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
+- 依照提供服務的主體為服務名稱、方法名稱來命名，例如：`MemberService` 的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubsBy(string memberId)`，雖然乍看之下這個方法應該由 `ClubService` 提供，但是取得 Member 所參與的 Club 這件事情，Member 才是主體，所參與的 Club 只是附屬於 Member 的屬性，因此應該由 MemberService 提供該方法。
+- 將取得的資料加以判斷、整理、運算、轉換。
+
 | Vocabulary    |                                                                                             |
 |---------------|---------------------------------------------------------------------------------------------|
 | -Service      | 邏輯層每個類別的結尾必定冠上 Service。                                                      |
