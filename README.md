@@ -82,6 +82,15 @@
 | Authenticate | POST      | 驗證使用者所送出的登入資訊                       |
 | Logout       | DELETE    | 登出                                             |
 
+### RESTful
+
+- **GET**
+
+> - 資源的命名一律使用複數型態。 EX: :o:/members/123456, :x:/member/123456
+> - 不可數名詞無單複數型態，不要假會，保持它不可數的樣子就好。<br />EX: :x:/feedbacks, :x:/feedbacklist, :o:/feedback
+
+- 更新資料，用 PATCH 取代 PUT。[文章一](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[文章二](https://ihower.tw/blog/archives/6483)
+
 ### 易混淆的詞彙
 
 | Vocabulary     |                                                                |
