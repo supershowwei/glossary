@@ -89,6 +89,7 @@
 > - 名詞資源視為受詞，命名一律使用複數型態。 EX: :o:/members/123456, :x:/member/123456
 > - 不可數名詞無單複數型態，不要假會，保持它不可數的樣子就好。<br />EX: :x:/feedbacks, :x:/feedbacklist, :o:/feedback
 > - 動名詞資源，若描述的是一個動詞行為，則用單數型態；若描述的是受詞，則使用複數型態。
+> - 使用複數型態來保持所有 HTTP 方法中的 API 一致，再來就是基於資源是服務套件中的集合的概念。
 
 - 更新資料，用 PATCH 取代 PUT。[文章一](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[文章二](https://ihower.tw/blog/archives/6483)
 
