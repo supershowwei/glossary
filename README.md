@@ -48,14 +48,15 @@
 | BatchInsert<br />MultiplyInsert | 多個插入語句一同執行                                                                                              |
 | BulkInsert                      | 執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。                                |
 | ExtractBy                       | 取得一筆資料，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。                   |
-| ExtractXWithY                   | 取得完整的 X 合併一部分的 Y，回傳 X。                                                                             |
-| ExtractXOfY                     | 取得完整的 X 合併一部分的 Y，回傳 Y。                                                                             |
+| ExtractXWithYBy                 | 取得完整的 X 合併一部分的 Y，回傳 X。                                                                             |
+| ExtractXOfYBy                   | 取得完整的 X 合併一部分的 Y，回傳 Y。                                                                             |
 | ListItemsBy                     | 取得清單列表的項目，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。             |
 | QueryBy                         | 取得一或多筆資料，回傳值為集合，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。 |
 | Update                          | 執行單一更新語句，依照 PK 更新一筆資料。                                                                          |
+| UpdateBy                        | 執行條件更新語句，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。               |
 | BatchUpdate<br />MultiplyUpdate | 多個更新語句一同執行                                                                                              |
 | Delete                          | 執行單一刪除語句，依照 PK 刪除一筆資料。                                                                          |
-| DeleteBy                        | 過濾條件執刪除語句，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。             |
+| DeleteBy                        | 執行條件刪除語句，By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。               |
 | -Config                         | 實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。                      |
 
 ### Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
