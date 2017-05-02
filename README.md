@@ -87,7 +87,7 @@
 | Authenticate | POST      | 驗證使用者所送出的登入資訊                       |
 | Logout       | DELETE    | 登出                                             |
 
-### RESTful
+### REST 風格
 
 - **GET**
 
