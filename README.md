@@ -108,7 +108,7 @@
 
 - **PATCH**
 
-> - 關於 PATCH 的 Non-Idempotent 特性，其實 PATCH 可以是 Idempotent，在這篇[RFC5789](https://tools.ietf.org/html/rfc5789#section-2)有說明。
+> - 關於 PATCH 的 Non-Idempotent 特性，其實 PATCH 可以是 Idempotent，在這篇 [RFC5789](https://tools.ietf.org/html/rfc5789#section-2) 有說明。
 
 - 更新資料，用 PATCH 取代 PUT。[文章一](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[文章二](https://ihower.tw/blog/archives/6483)
 
