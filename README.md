@@ -89,6 +89,14 @@
 
 ### REST 風格
 
+| HTTP Verb | Safe? | Idempotent? |
+|:---------:|:-----:|:-----------:|
+| GET       |   Y   |      Y      |
+| POST      |   N   |      N      |
+| PUT       |   N   |      N      |
+| PATCH     |   N   |      Y      |
+| DELETE    |   N   |      Y      |
+
 - **GET**
 
 > - 名詞資源視為受詞，命名一律使用複數型態。 EX: :o:/members/123456, :x:/member/123456
