@@ -97,6 +97,8 @@
 | PATCH     |   N   |      Y      |
 | DELETE    |   N   |      Y      |
 
+**Idempotent: 如果相同的操作再執行第二遍第三遍，結果還是跟第一遍的結果一樣（也就是說不管執行幾次，結果都跟只有執行一次一樣）*
+
 - **GET**
 
 > - 名詞資源視為受詞，命名一律使用複數型態。 EX: :o:/members/123456, :x:/member/123456
@@ -105,6 +107,10 @@
 > - 使用複數型態來保持所有 HTTP 方法中的 API 一致，再來就是基於資源是服務套件中的集合的概念。
 
 - 更新資料，用 PATCH 取代 PUT。[文章一](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[文章二](https://ihower.tw/blog/archives/6483)
+
+- **參考文章**
+> - [HTTP Verbs: 談 POST, PUT 和 PATCH 的應用](https://ihower.tw/blog/archives/6483)
+> - [常見的HTTP METHOD的不同性質分析：GET,POST和其他4種METHOD的差別](https://data-sci.info/2015/10/24/%E5%B8%B8%E8%A6%8B%E7%9A%84http-method%E7%9A%84%E4%B8%8D%E5%90%8C%E6%80%A7%E8%B3%AA%E5%88%86%E6%9E%90%EF%BC%9Agetpost%E5%92%8C%E5%85%B6%E4%BB%964%E7%A8%AEmethod%E7%9A%84%E5%B7%AE%E5%88%A5/)
 
 ### 易混淆的詞彙
 
