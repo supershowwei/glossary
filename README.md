@@ -91,11 +91,11 @@
 
 | HTTP Verb | Safe? | Idempotent? |
 |:---------:|:-----:|:-----------:|
-| GET       |   Y   |      Y      |
-| POST      |   N   |      N      |
-| PUT       |   N   |      Y      |
-| PATCH     |   N   |      N      |
-| DELETE    |   N   |      Y      |
+|    GET    |   Y   |      Y      |
+|    POST   |   N   |      N      |
+|    PUT    |   N   |      Y      |
+|   PATCH   |   N   |   N (or Y)  |
+|   DELETE  |   N   |      Y      |
 
 **Idempotent: 如果相同的操作再執行第二遍第三遍，結果還是跟第一遍的結果一樣（也就是說不管執行幾次，結果都跟只有執行一次一樣）*
 
@@ -105,6 +105,10 @@
 > - 不可數名詞無單複數型態，不要假會，保持它不可數的樣子就好。<br />EX: :x:/feedbacks, :x:/feedbacklist, :o:/feedback
 > - 動名詞資源，若描述的是一個動詞行為，則用單數型態；若描述的是受詞，則使用複數型態。
 > - 使用複數型態來保持所有 HTTP 方法中的 API 一致，再來就是基於資源是服務套件中的集合的概念。
+
+- **PATCH**
+
+> - 關於 PATCH 的 Non-Idempotent 特性，其實 PATCH 可以是 Idempotent，在這篇[RFC5789](https://tools.ietf.org/html/rfc5789#section-2)有說明。
 
 - 更新資料，用 PATCH 取代 PUT。[文章一](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[文章二](https://ihower.tw/blog/archives/6483)
 
