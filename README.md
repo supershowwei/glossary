@@ -20,17 +20,17 @@
 - 命名要思考贅詞，承上例子，`MemberService` 的 `GetWithClubsBy(string memberId)` 方法，使用起來就會長這樣 `memberService.GetWithClubsBy 123456`，如果多了一些贅詞看起來就會像這樣 `memberService.GetMemberWithClubsByMemberId 123456`。
 - Logic Service 經常以使用情境來設計，不優先以 Reusable 來思考設計方式。
 
-| Vocabulary     |                                        |
-|----------------|----------------------------------------|
-| -Service       | 邏輯層每個類別的結尾必定冠上 Service。 |
-| LookupService  | 查找服務，取得系統設定、靜態選項。     |
-| Create         | 新增行為                               |
-| List (By)      | 清單列表，僅回傳部分識別性資料。       |
-| Get (By)       | 取得一筆或多筆資料。                   |
-| GetXWithY (By) | 取得完整的 X 合併一部分的 Y，回傳 X。  |
-| GetXOfY (By)   | 取得完整的 X 合併一部分的 Y，回傳 Y。  |
-| Save           | 儲存檔案及更新資料表行為               |
-| Remove         | 移除行為                               |
+| Vocabulary      |                                        |
+|-----------------|----------------------------------------|
+| -Service        | 邏輯層每個類別的結尾必定冠上 Service。 |
+| LookupService   | 查找服務，取得系統設定、靜態選項。     |
+| Create<br />Add | 新增行為                               |
+| List (By)       | 清單列表，僅回傳部分識別性資料。       |
+| Get (By)        | 取得一筆或多筆資料。                   |
+| GetXWithY (By)  | 取得完整的 X 合併一部分的 Y，回傳 X。  |
+| GetXOfY (By)    | 取得完整的 X 合併一部分的 Y，回傳 Y。  |
+| Save            | 儲存檔案及更新資料表行為               |
+| Remove          | 移除行為                               |
 
 **By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。*
 
