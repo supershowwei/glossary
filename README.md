@@ -52,7 +52,7 @@
 | BunchBy                         | 取得一筆資料，連同相關的資料整串取回。                                                       |
 | ExtractXWithYBy                 | 取得完整的 X 合併一部分的 Y，回傳 X。                                                        |
 | ExtractXOfYBy                   | 取得完整的 X 合併一部分的 Y，回傳 Y。                                                        |
-| ListItemsBy                     | 取得清單列表的項目。                                                                         |
+| ItemizeBy                       | 取得清單列表的項目。                                                                         |
 | QueryBy                         | 取得一或多筆資料。                                                                           |
 | Update                          | 執行單一更新語句，依照 PK 更新一筆資料。                                                     |
 | UpdateBy                        | 執行條件更新語句。                                                                           |
