@@ -81,7 +81,6 @@
 | Details<br /> Show | GET       | 取得單筆資料                                     |
 | New                | GET       | 新增資料用的頁面                                 |
 | Create             | POST      | 新增資料用的方法                                 |
-| Addition           | PATCH     | 將資料加進某個集合中                             |
 | Edit               | GET       | 編輯資料用的頁面                                 |
 | Save               | PATCH     | 更新資料用的方法                                 |
 | Destroy            | GET       | 刪除資料用的頁面                                 |
