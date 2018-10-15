@@ -48,6 +48,8 @@
 | BatchInsert<br />MultiplyInsert | 多個插入語句一同執行                                                                         |
 | BulkInsert                      | 執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。           |
 | CountBy                         | 依條件取得資料數量                                                                           |
+| ExistsBy                        | 是否存在                                                                                     |
+| ExistsIn...By                   | 是否於某個條件下存在                                                                         |
 | ExtractBy                       | 取得一筆資料（僅限 SELECT 的欄位是從單一資料表來的）。                                       |
 | BunchBy                         | 取得一筆資料，連同相關的資料整串取回。                                                       |
 | ExtractXWithYBy                 | 取得完整的 X 合併一部分的 Y，回傳 X。                                                        |
