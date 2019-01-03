@@ -121,7 +121,7 @@
 
 ### 動詞也可當名詞
 
-[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)
+[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)
 
 ### 易混淆的詞彙
 
