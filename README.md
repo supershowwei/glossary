@@ -120,9 +120,9 @@
 > - [HTTP Verbs: 談 POST, PUT 和 PATCH 的應用](https://ihower.tw/blog/archives/6483)
 > - [常見的HTTP METHOD的不同性質分析：GET,POST和其他4種METHOD的差別](https://data-sci.info/2015/10/24/%E5%B8%B8%E8%A6%8B%E7%9A%84http-method%E7%9A%84%E4%B8%8D%E5%90%8C%E6%80%A7%E8%B3%AA%E5%88%86%E6%9E%90%EF%BC%9Agetpost%E5%92%8C%E5%85%B6%E4%BB%964%E7%A8%AEmethod%E7%9A%84%E5%B7%AE%E5%88%A5/)
 
-### 動詞也可當名詞
+### 動詞也是動名詞
 
-[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)
+[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)、[`Listen`](https://www.thefreedictionary.com/listen)
 
 ### 易混淆的詞彙
 
