@@ -122,7 +122,7 @@
 
 ### 動詞也是動名詞
 
-[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)、[`Listen`](https://www.thefreedictionary.com/listen)
+[`Edit`](https://www.thefreedictionary.com/edit)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Vote`](https://www.thefreedictionary.com/vote)
 
 ### 易混淆的詞彙
 
