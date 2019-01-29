@@ -132,13 +132,14 @@
 
 ### 詞性的英文
 
-| Vocabulary |        |
-|------------|--------|
-| noun       | 名詞   |
-| verb       | 動詞   |
-| plural     | 複數   |
-| synonym    | 同義詞 |
-| antonym    | 反義詞 |
+| Vocabulary   |        |
+|--------------|--------|
+| noun         | 名詞   |
+| verb         | 動詞   |
+| plural       | 複數   |
+| synonym      | 同義詞 |
+| antonym      | 反義詞 |
+| abbreviation | 縮寫   |
 
 ### 易混淆的詞彙
 
