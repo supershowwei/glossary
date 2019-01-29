@@ -130,6 +130,16 @@
 
 [`Edit`](https://www.thefreedictionary.com/edit)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
 
+### 詞性的英文
+
+| Vocabulary |        |
+|------------|--------|
+| noun       | 名詞   |
+| verb       | 動詞   |
+| plural     | 複數   |
+| synonym    | 同義詞 |
+| antonym    | 反義詞 |
+
 ### 易混淆的詞彙
 
 | Vocabulary     |                                                                |
