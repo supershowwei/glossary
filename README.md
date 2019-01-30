@@ -6,8 +6,8 @@
 |---------------|------------------------------------------------------------------------|
 | Model         | 命名空間（namespace），放置資料模型的地方。                            |
 | Data          | 命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。     |
-| Parameters    | 命名空間（namespace），放置 Logic Layer 所定義出來的方法的參數模型。   |
-| Tidings       | 命名空間（namespace），放置動態欄位更新用的模型。                      |
+| Meshes        | 命名空間（namespace），放置動態查詢用的模型。                          |
+| FieldSets     | 命名空間（namespace），放置動態欄位更新用的模型。                      |
 | Results       | 命名空間（namespace），放置 Logic Layer 所定義出來的方法的回傳值模型。 |
 | ServiceResult | 抽象類別，所有的回傳值模型必須是它的派生類。                           |
 | Aspects       | 命名空間（namespace），放置 AOP Advice 的地方。                        |
@@ -21,17 +21,18 @@
 - 命名要思考贅詞，承上例子，`MemberService` 的 `GetWithClubsBy(string memberId)` 方法，使用起來就會長這樣 `memberService.GetWithClubsBy 123456`，如果多了一些贅詞看起來就會像這樣 `memberService.GetMemberWithClubsByMemberId 123456`。
 - Logic Service 經常以使用情境來設計，不優先以 Reusable 來思考設計方式。
 
-| Vocabulary      |                                        |
-|-----------------|----------------------------------------|
-| -Service        | 邏輯層每個類別的結尾必定冠上 Service。 |
-| LookupService   | 查找服務，取得系統設定、靜態選項。     |
-| Create<br />Add | 新增行為                               |
-| List (By)       | 清單列表，僅回傳部分識別性資料。       |
-| Get (By)        | 取得一筆或多筆資料。                   |
-| GetXWithY (By)  | 取得完整的 X 合併一部分的 Y，回傳 X。  |
-| GetXOfY (By)    | 取得完整的 X 合併一部分的 Y，回傳 Y。  |
-| Save            | 儲存檔案及更新資料表行為               |
-| Remove          | 移除行為                               |
+| Vocabulary      |                                          |
+|-----------------|------------------------------------------|
+| -Service        | 邏輯層每個類別的結尾必定冠上 Service。   |
+| LookupService   | 查找服務，取得系統設定、靜態選項。       |
+| Create<br />Add | 新增行為                                 |
+| List (By)       | 清單列表，僅回傳部分識別性資料。         |
+| Get (By)        | 取得一筆或多筆資料。                     |
+| GetPart (By)    | 取得一筆或多筆資料，包含指定的部分欄位。 |
+| GetXWithY (By)  | 取得完整的 X 合併一部分的 Y，回傳 X。    |
+| GetXOfY (By)    | 取得完整的 X 合併一部分的 Y，回傳 Y。    |
+| Save            | 儲存檔案及更新資料表行為                 |
+| Remove          | 移除行為                                 |
 
 **By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。*
 
@@ -52,11 +53,13 @@
 | ExistsBy                        | 是否存在                                                                                     |
 | ExistsIn...By                   | 是否於某個條件下存在                                                                         |
 | ExtractBy                       | 取得一筆資料（僅限 SELECT 的欄位是從單一資料表來的）。                                       |
+| ExtractPartBy                   | 取得一筆資料，包含指定的部分欄位。                                                           |
 | BunchBy                         | 取得一筆資料，連同相關的資料整串取回。                                                       |
 | ExtractXWithYBy                 | 取得完整的 X 合併一部分的 Y，回傳 X。                                                        |
 | ExtractXOfYBy                   | 取得完整的 X 合併一部分的 Y，回傳 Y。                                                        |
 | ItemizeBy                       | 取得清單列表的項目。                                                                         |
 | QueryBy                         | 取得一或多筆資料。                                                                           |
+| QueryPartBy                     | 取得一或多筆資料，包含指定的部分欄位。                                                       |
 | Update                          | 執行單一更新語句，依照 PK 更新一筆資料。                                                     |
 | UpdateBy                        | 執行條件更新語句。                                                                           |
 | BatchUpdate<br />MultiplyUpdate | 多個更新語句一同執行                                                                         |
