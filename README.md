@@ -126,9 +126,9 @@
 
 - xxxIds、xxxIDs：表達一個識別值的集合，建議改用 xxxIdentifiers 命名。
 
-### 動詞也是動名詞
+### 可以是動名詞的動詞
 
-[`Edit`](https://www.thefreedictionary.com/edit)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Save`](https://www.thefreedictionary.com/save)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
+[`Edit`](https://www.thefreedictionary.com/edit)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Save`](https://www.thefreedictionary.com/save)、[`Set`](https://www.thefreedictionary.com/set)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
 
 ### 詞性的英文
 
