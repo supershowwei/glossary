@@ -131,7 +131,7 @@
 
 ### 可以是動名詞的動詞
 
-[`Edit`](https://www.thefreedictionary.com/edit)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Reply`](https://www.thefreedictionary.com/reply)、[`Save`](https://www.thefreedictionary.com/save)、[`Set`](https://www.thefreedictionary.com/set)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
+[`Add`](https://en.wiktionary.org/wiki/add#Noun)、[`Edit`](https://www.thefreedictionary.com/edit)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Reply`](https://www.thefreedictionary.com/reply)、[`Save`](https://www.thefreedictionary.com/save)、[`Set`](https://www.thefreedictionary.com/set)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
 
 ### 詞性的英文
 
