@@ -189,3 +189,4 @@
 | Configuration | 已確定 Configure 的結果                                             |
 | Config        | Configure 或 Configuration 的縮寫                                   |
 | Profile       | 指一系列對特定個體的不一定全面的描述，翻成輪廓更准確。              |
+| Preferences   | 偏好、喜好。                                                        |
