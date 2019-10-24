@@ -51,7 +51,7 @@
 | BulkInsert  | 執行批次插入語句，與 BatchInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。              |
 | Count       | 依條件取得資料數量                                                                           |
 | Exists      | 是否存在                                                                                     |
-| ExistsIn... | 是否於某個條件下存在                                                                         |
+|             | 是否於某個條件下存在，為 Exists 的多載。                                                     |
 | QueryOne    | 取得一筆資料（僅限 SELECT 的欄位是從單一資料表來的）。                                       |
 |             | 取得一筆資料，包含指定的部分欄位，為 QueryOne 的多載。                                       |
 | BundleQuery | 取得一筆資料，連同取回相關的資料。                                                           |
