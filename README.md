@@ -43,29 +43,28 @@
 - DAO 元件經常會被多個不同的 Logic Service 使用，設計上要偏向 Reusable。
 - 依鍵值撈取單一筆資料時，設計上傾向預設將連同有一對一關聯的資料一起撈出來。
 
-| Vocabulary                      |                                                                                              |
-|---------------------------------|----------------------------------------------------------------------------------------------|
-| Create                          | 建立檔案                                                                                     |
-| Insert                          | 執行單一插入語句                                                                             |
-| BatchInsert<br />MultiplyInsert | 多個插入語句一同執行                                                                         |
-| BulkInsert                      | 執行批次插入語句，與 MultiplyInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。           |
-| CountBy                         | 依條件取得資料數量                                                                           |
-| ExistsBy                        | 是否存在                                                                                     |
-| ExistsIn...By                   | 是否於某個條件下存在                                                                         |
-| ExtractBy                       | 取得一筆資料（僅限 SELECT 的欄位是從單一資料表來的）。                                       |
-| ExtractPartBy                   | 取得一筆資料，包含指定的部分欄位。                                                           |
-| BunchBy                         | 取得一筆資料，連同相關的資料整串取回。                                                       |
-| ExtractXWithYBy                 | 取得完整的 X 合併一部分的 Y，回傳 X。                                                        |
-| ExtractXOfYBy                   | 取得完整的 X 合併一部分的 Y，回傳 Y。                                                        |
-| ItemizeBy                       | 取得清單列表的項目。                                                                         |
-| QueryBy                         | 取得一或多筆資料。                                                                           |
-| QueryPartBy                     | 取得一或多筆資料，包含指定的部分欄位。                                                       |
-| Update                          | 執行單一更新語句，依照 PK 更新一筆資料。                                                     |
-| UpdateBy                        | 執行條件更新語句。                                                                           |
-| BatchUpdate<br />MultiplyUpdate | 多個更新語句一同執行                                                                         |
-| Delete                          | 執行單一刪除語句，依照 PK 刪除一筆資料。                                                     |
-| DeleteBy                        | 執行條件刪除語句。                                                                           |
-| -Config                         | 實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。 |
+| Vocabulary  |                                                                                              |
+|-------------|----------------------------------------------------------------------------------------------|
+| Create      | 建立檔案                                                                                     |
+| Insert      | 執行單一插入語句                                                                             |
+| BatchInsert | 多個插入語句一同執行                                                                         |
+| BulkInsert  | 執行批次插入語句，與 BatchInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。              |
+| Count       | 依條件取得資料數量                                                                           |
+| Exists      | 是否存在                                                                                     |
+| ExistsIn... | 是否於某個條件下存在                                                                         |
+| QueryOne    | 取得一筆資料（僅限 SELECT 的欄位是從單一資料表來的）。                                       |
+|             | 取得一筆資料，包含指定的部分欄位，為 QueryOne 的多載。                                       |
+| BundleQuery | 取得一筆資料，連同取回相關的資料。                                                           |
+| Query       | 取得一或多筆資料。                                                                           |
+|             | 取得一或多筆資料，包含指定的部分欄位，為 Query 的多載。                                      |
+| Itemize     | 取得清單列表的項目。                                                                         |
+| Update      | 執行單一更新語句，依照 PK 更新一筆資料。                                                     |
+|             | 執行條件更新語句，為 Update 的多載。                                                         |
+| BatchUpdate | 多個更新語句一同執行                                                                         |
+| BulkUpdate  | 執行批次插入語句，與 BatchUpdate 不同的是 BulkUpdate 使用資料庫批次更新的語法。              |
+| Delete      | 執行單一刪除語句，依照 PK 刪除一筆資料。                                                     |
+|             | 執行條件刪除語句，為 Delete 的多載。                                                         |
+| -Config     | 實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。 |
 
 **By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。*
 
