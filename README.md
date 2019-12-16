@@ -13,12 +13,8 @@
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
-- 要重構成一個 Logic Service 有幾個條件：資源需具有集合的特性、已設計或實作 CRU（U包含D）的行為。
-- 將取得的資料加以判斷、整理、運算、轉換。
-- 以提供服務的主體為服務命名，例如：`MemberService` 服務的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubs(string memberId)`，乍看之下這個方法應該由 `ClubService` 服務提供，但是 Member 所參與的 Club 只是附屬於 Member 的屬性，Member 才是服務的主體，因此應該由 MemberService 提供該方法。
-- 以提供服務的意圖為方法命名，承上例子，`GetWithClubs(string memberId)` 展現主體服務行為的意圖。
-- 命名要思考贅詞，承上例子，`MemberService` 的 `GetWithClubs(string memberId)` 方法，使用起來就會長這樣 `memberService.GetWithClubs 123456`，如果多了一些贅詞看起來就會像這樣 `memberService.GetMemberWithClubsMemberId 123456`。
-- Logic Service 經常以使用情境來設計，不優先以 Reusable 來思考設計方式。
+- 以領域為邊界構成一個 Logic Service
+- Logic Service 經常以使用情境來設計，不以 Reusable 優先來思考設計方式。
 
 | Vocabulary      |                                        |
 |-----------------|----------------------------------------|
@@ -32,10 +28,10 @@
 
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
-- 依照實際存放資料的實體來為 DAO 及方法命名，例如：`MemberService` 提供了一個 `GetUnreadInsideMailCount(string memberId)` 方法，實際存放資料的實體是 `InsideMail` 這個資料倉儲，因此其 DAO 應命名為 `InsideMailDataAccess` 與 MemberService 形成聚合關係。
-- 禁止做資料的整理、判斷、運算、轉換，單純做接受參數、取資料、回傳資料的工作。
-- DAO 元件經常會被多個不同的 Logic Service 使用，設計上要偏向 Reusable。
-- 依鍵值撈取單一筆資料時，設計上傾向預設將連同有一對一關聯的資料一起撈出來。
+- 用 IDataAccess<T> 來為每個資料表實作 Generic Data Access Object，僅處理單一資料表的 CRUD。
+- Logic Service 要做 Transaction、JOIN 資料表、...等較複雜的 Query，必須搭配 XXXRepository 來處理，不與 Data Access Object 混在一起。
+- Repository 可以寫純 SQL 或是注入 Data Access Object 來使用
+- 禁止做商業邏輯的判斷、運算、轉換。
 
 | Vocabulary  |                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------|
