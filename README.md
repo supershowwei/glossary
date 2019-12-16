@@ -16,25 +16,20 @@
 
 - 要重構成一個 Logic Service 有幾個條件：資源需具有集合的特性、已設計或實作 CRU（U包含D）的行為。
 - 將取得的資料加以判斷、整理、運算、轉換。
-- 以提供服務的主體為服務命名，例如：`MemberService` 服務的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubsBy(string memberId)`，乍看之下這個方法應該由 `ClubService` 服務提供，但是 Member 所參與的 Club 只是附屬於 Member 的屬性，Member 才是服務的主體，因此應該由 MemberService 提供該方法。
-- 以提供服務的意圖為方法命名，承上例子，`GetWithClubsBy(string memberId)` 展現主體服務行為的意圖。
-- 命名要思考贅詞，承上例子，`MemberService` 的 `GetWithClubsBy(string memberId)` 方法，使用起來就會長這樣 `memberService.GetWithClubsBy 123456`，如果多了一些贅詞看起來就會像這樣 `memberService.GetMemberWithClubsByMemberId 123456`。
+- 以提供服務的主體為服務命名，例如：`MemberService` 服務的主體為 Member，其中取得 Member 所參與的 Club 的方法 - `GetWithClubs(string memberId)`，乍看之下這個方法應該由 `ClubService` 服務提供，但是 Member 所參與的 Club 只是附屬於 Member 的屬性，Member 才是服務的主體，因此應該由 MemberService 提供該方法。
+- 以提供服務的意圖為方法命名，承上例子，`GetWithClubs(string memberId)` 展現主體服務行為的意圖。
+- 命名要思考贅詞，承上例子，`MemberService` 的 `GetWithClubs(string memberId)` 方法，使用起來就會長這樣 `memberService.GetWithClubs 123456`，如果多了一些贅詞看起來就會像這樣 `memberService.GetMemberWithClubsMemberId 123456`。
 - Logic Service 經常以使用情境來設計，不優先以 Reusable 來思考設計方式。
 
-| Vocabulary      |                                          |
-|-----------------|------------------------------------------|
-| -Service        | 邏輯層每個類別的結尾必定冠上 Service。   |
-| LookupService   | 查找服務，取得系統設定、靜態選項。       |
-| Create<br />Add | 新增行為                                 |
-| List (By)       | 清單列表，僅回傳部分識別性資料。         |
-| Get (By)        | 取得一筆或多筆資料。                     |
-| GetPart (By)    | 取得一筆或多筆資料，包含指定的部分欄位。 |
-| GetXWithY (By)  | 取得完整的 X 合併一部分的 Y，回傳 X。    |
-| GetXOfY (By)    | 取得完整的 X 合併一部分的 Y，回傳 Y。    |
-| Save            | 儲存檔案及更新資料表行為                 |
-| Remove          | 移除行為                                 |
-
-**By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。*
+| Vocabulary      |                                        |
+|-----------------|----------------------------------------|
+| -Service        | 邏輯層每個類別的結尾必定冠上 Service。 |
+| LookupService   | 查找服務，取得系統設定、靜態選項。     |
+| Create<br />Add | 新增行為                               |
+| List            | 清單列表，僅回傳部分識別性資料。       |
+| Get             | 取得一筆或多筆資料。                   |
+| Save            | 儲存檔案及更新資料表行為               |
+| Remove          | 移除行為                               |
 
 ### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
@@ -45,7 +40,7 @@
 
 | Vocabulary  |                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------|
-| Create      | 建立檔案                                                                                     |
+| Create      | 建立**檔案**                                                                                 |
 | Insert      | 執行單一插入語句                                                                             |
 | BatchInsert | 多個插入語句一同執行                                                                         |
 | BulkInsert  | 執行批次插入語句，與 BatchInsert 不同的是 BulkInsert 使用資料庫批次寫入的語法。              |
@@ -66,8 +61,6 @@
 |             | 執行條件刪除語句，為 Delete 的多載。                                                         |
 | -Config     | 實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。 |
 
-**By 後面接的名稱（或方法內參數名稱）描述主要的過濾條件，描述的過濾條件必須是名詞。*
-
 ### Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
 
 | Vocabulary           |                                      |
@@ -79,20 +72,20 @@
 
 ### ASP.NET MVC Action Naming Convention
 
-| Vocabulary         | HTTP Verb |                                                  |
-|--------------------|-----------|--------------------------------------------------|
-| Index              | GET       | 資源的起始頁面                                   |
-| List               | GET       | 依條件列出資料，若無條件則表示全部。             |
-| Details<br /> Show | GET       | 取得單筆資料                                     |
-| New                | GET       | 新增資料用的頁面                                 |
-| Create             | POST      | 新增資料用的方法                                 |
-| Edit               | GET       | 編輯資料用的頁面                                 |
-| Save               | PATCH     | 更新資料用的方法                                 |
-| Destroy            | GET       | 刪除資料用的頁面                                 |
-| Remove             | DELETE    | 移除單筆資料，若要依條件刪除資料就實作多載方法。 |
-| Login              | GET       | 登入用的頁面                                     |
-| Authenticate       | POST      | 驗證使用者所送出的登入資訊                       |
-| Logout             | DELETE    | 登出                                             |
+| Vocabulary        | HTTP Verb |                                                  |
+|-------------------|-----------|--------------------------------------------------|
+| Index             | GET       | 資源的起始頁面                                   |
+| List              | GET       | 依條件列出資料，若無條件則表示全部。             |
+| Details<br />Show | GET       | 取得單筆資料                                     |
+| New               | GET       | 新增資料用的頁面                                 |
+| Create            | POST      | 新增資料用的方法                                 |
+| Edit              | GET       | 編輯資料用的頁面                                 |
+| Save              | PATCH     | 更新資料用的方法                                 |
+| Destroy           | GET       | 刪除資料用的頁面                                 |
+| Remove            | DELETE    | 移除單筆資料，若要依條件刪除資料就實作多載方法。 |
+| Login             | GET       | 登入用的頁面                                     |
+| Authenticate      | POST      | 驗證使用者所送出的登入資訊                       |
+| Logout            | DELETE    | 登出                                             |
 
 ### REST 風格
 
