@@ -2,14 +2,14 @@
 
 ### Contract Layer：合約層，放置接口（Interface）、資料模型的地方。
 
-| Vocabulary      |                                                                                         |
-|-----------------|-----------------------------------------------------------------------------------------|
-| Model           | 命名空間（namespace），放置資料模型的地方。                                             |
-| Data            | 命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。                      |
-| QueryParameters | 命名空間（namespace），定義在 Model 底下，放置動態條件查詢用的模型。                    |
-| FieldSets       | 命名空間（namespace），定義在 Model 底下，放置動態欄位更新用的模型。                    |
-| Results         | 命名空間（namespace），定義在 Model 底下，放置 Logic Layer 所定義出來的方法回傳值模型。 |
-| Aspects         | 命名空間（namespace），放置 AOP Advice 的地方。                                         |
+| Vocabulary |                                                                                         |
+|------------|-----------------------------------------------------------------------------------------|
+| Model      | 命名空間（namespace），放置資料模型的地方。                                             |
+| Data       | 命名空間（namespace），定義在 Model 底下，放置商業資料模型的地方。                      |
+| Quests     | 命名空間（namespace），定義在 Model 底下，放置動態條件查詢用的模型。                    |
+| FieldSets  | 命名空間（namespace），定義在 Model 底下，放置動態欄位更新用的模型。                    |
+| Results    | 命名空間（namespace），定義在 Model 底下，放置 Logic Layer 所定義出來的方法回傳值模型。 |
+| Aspects    | 命名空間（namespace），放置 AOP Advice 的地方。                                         |
 
 ### Logic Layer：邏輯層，放置商業邏輯的地方。
 
