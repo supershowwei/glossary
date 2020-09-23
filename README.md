@@ -191,3 +191,11 @@
 | Simulator  | 著重於整體模型的建造                                                                                                                                                                   |
 | Emulator   | 著重於主要功能的實踐                                                                                                                                                                   |
 |            | 一句話來解釋這兩者的差異「If a flight-simulator could transport you from A to B then it would be a flight-emulator.（如果一個飛行模擬器能將你從 A 傳送到 B，那麼它就是飛行仿真器。）」 |
+
+| Vocabulary    |                                                                                        |
+|---------------|----------------------------------------------------------------------------------------|
+| Options       | We have set some things already, and give you the option to change them.               |
+| Settings      | View or modify the list of things that can be set                                      |
+| Properties    | Change one or more properties of this item                                             |
+| Configuration | We have defaults, but they're so barebones you probably want to configure it yourself. |
+| Preferences   | Tell us how you prefer this to work                                                    |
