@@ -1,6 +1,6 @@
 # 詞彙
 
-### Contract Layer：合約層，放置接口（Interface）、資料模型的地方。
+## Contract Layer：合約層，放置接口（Interface）、資料模型的地方。
 
 | Vocabulary |                                                                                         |
 |------------|-----------------------------------------------------------------------------------------|
@@ -11,7 +11,7 @@
 | Results    | 命名空間（namespace），定義在 Model 底下，放置 Logic Layer 所定義出來的方法回傳值模型。 |
 | Aspects    | 命名空間（namespace），放置 AOP Advice 的地方。                                         |
 
-### Logic Layer：邏輯層，放置商業邏輯的地方。
+## Logic Layer：邏輯層，放置商業邏輯的地方。
 
 - 以領域為邊界構成一個 Logic Service
 - Logic Service 經常以使用情境來設計，不以 Reusable 優先來思考設計方式。
@@ -26,7 +26,7 @@
 | Save            | 儲存檔案及更新資料表行為               |
 | Remove          | 移除行為                               |
 
-### Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
+## Physical Layer：實體層，又稱資料存取層，放置存取資料方法的地方。
 
 - 用 IDataAccess<T> 來為每個資料表實作 Generic Data Access Object，僅處理單一資料表的 CRUD。
 - Logic Service 要做 Transaction、JOIN 資料表、...等較複雜的 Query，必須搭配 XXXRepository 來處理，不與 Data Access Object 混在一起。
@@ -56,7 +56,7 @@
 |             | 執行條件刪除語句，為 Delete 的多載。                                                         |
 | -Config     | 實際到資料來源取得系統設定、靜態選項的類別，通常實作 Singleton 模式，並 Cache 所取得的資料。 |
 
-### Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
+## Cross-cutting：分層的橫切面，被安插至各個物件的處理流程之中。
 
 | Vocabulary           |                                      |
 |----------------------|--------------------------------------|
@@ -65,13 +65,13 @@
 | -Aspect              | 側面、局面。                         |
 | LogAspect            | 日誌方面，在方法執行的前後加入日誌。 |
 
-### ASP.NET MVC Action Naming Convention
+## ASP.NET MVC Action Naming Convention
 
 | Vocabulary        | HTTP Verb |                                                  |
 |-------------------|-----------|--------------------------------------------------|
 | Index             | GET       | 資源的起始頁面                                   |
 | List              | GET       | 依條件列出資料，若無條件則表示全部。             |
-| Details<br />Show | GET       | 取得單筆資料                                     |
+| Detail            | GET       | 取得單筆資料                                     |
 | New               | GET       | 新增資料用的頁面                                 |
 | Create            | POST      | 新增資料用的方法                                 |
 | Edit              | GET       | 編輯資料用的頁面                                 |
@@ -82,7 +82,7 @@
 | Authenticate      | POST      | 驗證使用者所送出的登入資訊                       |
 | Logout            | DELETE    | 登出                                             |
 
-### REST 風格
+## REST 風格
 
 | HTTP Verb | Safe? | Idempotent? |
 |:---------:|:-----:|:-----------:|
@@ -110,17 +110,17 @@
 > - [HTTP Verbs: 談 POST, PUT 和 PATCH 的應用](https://ihower.tw/blog/archives/6483)
 > - [常見的HTTP METHOD的不同性質分析：GET,POST和其他4種METHOD的差別](https://data-sci.info/2015/10/24/%E5%B8%B8%E8%A6%8B%E7%9A%84http-method%E7%9A%84%E4%B8%8D%E5%90%8C%E6%80%A7%E8%B3%AA%E5%88%86%E6%9E%90%EF%BC%9Agetpost%E5%92%8C%E5%85%B6%E4%BB%964%E7%A8%AEmethod%E7%9A%84%E5%B7%AE%E5%88%A5/)
 
-### 集合類型的命名
+## 集合類型的命名
 
 以名詞複數呈現或以 `-List`、`-Collection` 結尾，底下是遇到的一些特殊案例：
 
 - xxxIds、xxxIDs：表達一個識別值的集合，建議改用 xxxIdentifiers 命名。
 
-### 可以是動名詞的動詞
+## 可以是動名詞的動詞
 
 [`Add`](https://en.wiktionary.org/wiki/add#Noun)、[`Buy`](https://www.thefreedictionary.com/buy)、[`Capture`](https://www.thefreedictionary.com/capture)、[`Decrease`](https://www.thefreedictionary.com/decrease)、[`Edit`](https://www.thefreedictionary.com/edit)、[`Find`](https://www.thefreedictionary.com/find)、[`Finish`](https://www.thefreedictionary.com/finish)、[`Follow`](https://www.thefreedictionary.com/follow)、[`Increase`](https://www.thefreedictionary.com/increase)、[`Insert`](https://www.thefreedictionary.com/insert)、[`Listen`](https://www.thefreedictionary.com/listen)、[`Purchase`](https://www.thefreedictionary.com/purchase)、[`Pull`](https://www.thefreedictionary.com/pull)、[`Quote`](https://www.thefreedictionary.com/quote)、[`Reply`](https://www.thefreedictionary.com/reply)、[`Save`](https://www.thefreedictionary.com/save)、[`Sell`](https://www.thefreedictionary.com/sell)、[`Set`](https://www.thefreedictionary.com/set)、[`Start`](https://www.thefreedictionary.com/start)、[`Update`](https://www.thefreedictionary.com/update)、[`Upload`](https://www.thefreedictionary.com/upload)、[`Vote`](https://www.thefreedictionary.com/vote)
 
-### 詞性的英文
+## 詞性的英文
 
 | Vocabulary   |        |
 |--------------|--------|
@@ -131,14 +131,14 @@
 | antonym      | 反義詞 |
 | abbreviation | 縮寫   |
 
-### 序數
+## 序數
 
 | Vocabulary                                                                                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Primary, Secondary, Tertiary, Quaternary, Quinary, Senary, Septenary, Octonary, Nonary, Denary.                                                                                            |
 | First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, Ninth, Tenth, Eleventh, Twelfth, Thirteenth, Fourteenth, Fifteenth, Sixteenth, Seventeenth, Eighteenth, Nineteenth, Twentieth. |
 
-### 易混淆的詞彙
+## 易混淆的詞彙
 
 | Vocabulary     |                                                                |
 |----------------|----------------------------------------------------------------|
@@ -204,3 +204,73 @@
 |----------------|--------------------------------|
 | Before / After | 大於（>）/ 小於（<）           |
 | Start / End    | 大於等於（>=）/ 小於等於（<=） |
+
+## API 命名慣例
+
+用 ASP.NET Core MVC 開發，會把畫面跟 Web API 混在同一個專案裡面，這邊列一些命名慣例來作為參考。
+
+以某網站的某個頻道為例，假設這個頻道叫 Laojiao，Laojiao 底下有 Project，Project 底下有 Article，Article 底下有 Comment，Comment 底下有 Reply，擁有五層的階層關係，但是 Laojiao 是抽象的概念，沒有實體資料，有實體資料是從 Project 開始，所以實體階段關係只有四層，如果以 ASP.NET Core MVC 專案範本進行開發，Web API 的設計規劃會是怎樣？
+
+### 頻道首頁（專案列表）
+|      | Web API          | Area    | Controller | Action | 應用場景 |
+|------|------------------|---------|------------|--------|----------|
+| 畫面 | HttPGet /laojiao | Laojiao | Project    | Index  |          |
+
+### 單一專案
+|      | Web API                               | Area    | Controller | Action | 應用場景                                |
+|------|---------------------------------------|---------|------------|--------|-----------------------------------------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int} | Laojiao | Project    | Project |                                         |
+| 公開資料 | HttpGet /laojiao/project/{projectId:int}/info | Laojiao | Project    | Info    | 部分的資料，通常是無需權限即可存取。   |
+| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/detail | Laojiao | Project    | Detail  | 完整的資料，有時候需要權限才能存取。   |
+| 專案留言列表 | HttpGet /laojiao/project/{projectId:int}/comment/list | Laojiao | Comment    | List    | 能存取文章時，留言連同回覆一併存取。   |
+
+### 文章列表
+|      | Web API                               | Area    | Controller | Action | 應用場景 |
+|------|---------------------------------------|---------|------------|--------|----------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int}/article | Laojiao | Article    | Index   |          |
+| 資料 | HttpGet /laojiao/project/{projectId:int}/article/list | Laojiao | Article    | List    |          |
+
+### 單篇文章
+|      | Web API                               | Area    | Controller | Action  | 應用場景                                |
+|------|---------------------------------------|---------|------------|---------|-----------------------------------------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int} | Laojiao | Article    | Article |                                         |
+| 公開資料 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/info | Laojiao | Article    | Info    | 部分的資料，通常是無需權限即可存取。   |
+| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/detail | Laojiao | Article    | Detail  | 完整的資料，有時候需要權限才能存取。   |
+| 文章留言列表 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/list | Laojiao | ArticleComment | List    | 能存取文章時，留言連同回覆一併存取。   |
+
+### 單篇文章留言
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int} | Laojiao | ArticleComment | Comment |          |
+
+### 單篇文章留言的回覆
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 回覆列表 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int}/reply/list | Laojiao | ArticleCommentReply | List    |          |
+|  |  |  | ArticleComment | ReplyList |          |
+| 單篇回覆 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int}/reply/{replyId:int}/detail | Laojiao | ArticleCommentReply | Detail  |          |
+|  |  |  | ArticleComment | ReplyDetail |          |
+
+### 新增文章
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int}/article/new | Laojiao | Article    | New     |          |
+| 新增 | HTTP POST /project/{projectId:int}/article | Project | Article    | Create  |          |
+
+### 編輯文章
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 畫面 | HttpGet /laojiao/project/{projectId:int}/article/edit | Laojiao | Article    | Edit    |          |
+| 儲存 | HttpPatch /project/{projectId:int}/article | Project | Article    | Save    |          |
+| 儲存 | HttpPut /project/{projectId:int}/article | Project | Article    | Save    |          |
+
+### 刪除文章
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 刪除 | HttpDelete /project/{projectId:int}/article/{articleId:int} | Project | Article    | Remove  |          |
+
+### 刪除多篇文章
+|      | Web API                               | Area    | Controller | Action  | 應用場景 |
+|------|---------------------------------------|---------|------------|---------|----------|
+| 刪除 | HttpDelete /project/{projectId:int}/article?id=1,2,3 | Project | Article    | Remove  |          |
+
