@@ -71,7 +71,7 @@
 |-------------------|-----------|--------------------------------------------------|
 | Index             | GET       | 資源的起始頁面                                   |
 | List              | GET       | 依條件列出資料，若無條件則表示全部。             |
-| Detail            | GET       | 取得單筆資料                                     |
+| Details           | GET       | 取得單筆資料                                     |
 | New               | GET       | 新增資料用的頁面                                 |
 | Create            | POST      | 新增資料用的方法                                 |
 | Edit              | GET       | 編輯資料用的頁面                                 |
@@ -221,7 +221,7 @@
 |------|---------------------------------------|---------|------------|--------|-----------------------------------------|
 | 畫面 | HttpGet /laojiao/project/{projectId:int} | Laojiao | Project    | Project |                                         |
 | 公開資料 | HttpGet /laojiao/project/{projectId:int}/info | Laojiao | Project    | Info    | 部分的資料，通常是無需權限即可存取。   |
-| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/detail | Laojiao | Project    | Detail  | 完整的資料，有時候需要權限才能存取。   |
+| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/details | Laojiao | Project    | Details  | 完整的資料，有時候需要權限才能存取。   |
 | 專案留言列表 | HttpGet /laojiao/project/{projectId:int}/comment/list | Laojiao | Comment    | List    | 能存取文章時，留言連同回覆一併存取。   |
 
 ### 文章列表
@@ -235,7 +235,7 @@
 |------|---------------------------------------|---------|------------|---------|-----------------------------------------|
 | 畫面 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int} | Laojiao | Article    | Article |                                         |
 | 公開資料 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/info | Laojiao | Article    | Info    | 部分的資料，通常是無需權限即可存取。   |
-| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/detail | Laojiao | Article    | Detail  | 完整的資料，有時候需要權限才能存取。   |
+| 詳細資料 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/details | Laojiao | Article    | Details  | 完整的資料，有時候需要權限才能存取。   |
 | 文章留言列表 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/list | Laojiao | ArticleComment | List    | 能存取文章時，留言連同回覆一併存取。   |
 
 ### 單篇文章留言
@@ -248,8 +248,8 @@
 |------|---------------------------------------|---------|------------|---------|----------|
 | 回覆列表 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int}/reply/list | Laojiao | ArticleCommentReply | List    |          |
 |  |  |  | ArticleComment | ReplyList |          |
-| 單篇回覆 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int}/reply/{replyId:int}/detail | Laojiao | ArticleCommentReply | Detail  |          |
-|  |  |  | ArticleComment | ReplyDetail |          |
+| 單篇回覆 | HttpGet /laojiao/project/{projectId:int}/article/{articleId:int}/comment/{commentId:int}/reply/{replyId:int}/details | Laojiao | ArticleCommentReply | Details  |          |
+|  |  |  | ArticleComment | ReplyDetails |          |
 
 ### 新增文章
 |      | Web API                               | Area    | Controller | Action  | 應用場景 |
