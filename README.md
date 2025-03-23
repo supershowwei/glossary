@@ -274,3 +274,13 @@
 |------|---------------------------------------|---------|------------|---------|----------|
 | 刪除 | HttpDelete /project/{projectId:int}/article?id=1,2,3 | Project | Article    | Remove  |          |
 
+## API 參數命名慣例
+
+| CRUD 動作       | 命名格式         | 命名範例                                                 | 適用情境                                                       |   |
+|-----------------|------------------|----------------------------------------------------------|----------------------------------------------------------------|---|
+| Create          | CreateXXXInput   | CreateAccountInput CreateArticleInput                    | 明確代表是新增資料（不涉及更新）                               |   |
+| Create / Update | SaveXXXInput     | SaveUserProfileInput SavePhotographyPreferencesInput     | 用於新增或更新都可能的情境（多數一般表單）                     |   |
+| Update          | UpdateXXXInput   | UpdateUserProfileInput UpdatePhotographyPreferencesInput | 明確代表是更新資料（不涉及新增）                               |   |
+| Read (List)     | XXXListFilter    | ArticleListFilter UserListFilter                         | 針對列表查詢提供過濾條件（回傳部分資料的清單）                 |   |
+| Read (複數資源) | XXXFilter (複數) | ArticlesFilter MembersFilter                             | 若資源本身語意為集合或明確強調複數                             |   |
+| Remove          | RemoveXXXCommand | RemoveAccountCommand RemoveArticleCommand                | 用於需要傳遞刪除參數的 API（例如：POST /remove、DELETE /{id}） |   |
