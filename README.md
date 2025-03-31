@@ -211,6 +211,9 @@
 
 以某網站的某個頻道為例，假設這個頻道叫 Laojiao，Laojiao 底下有 Project，Project 底下有 Article，Article 底下有 Comment，Comment 底下有 Reply，擁有五層的階層關係，但是 Laojiao 是抽象的概念，沒有實體資料，有實體資料是從 Project 開始，所以實體階段關係只有四層，如果以 ASP.NET Core MVC 專案範本進行開發，Web API 的設計規劃會是怎樣？
 
+原則：在 API 的網址中，如果有 Action 參數，應該加到網址中。
+例如：/laojiao/project?projectId=1，應該改為 /laojiao/project/1。
+
 ### 頻道首頁（專案列表）
 |      | Web API          | Area    | Controller | Action | 應用場景 |
 |------|------------------|---------|------------|--------|----------|
