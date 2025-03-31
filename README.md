@@ -272,7 +272,7 @@
 ### 刪除多篇文章
 |      | Web API                               | Area    | Controller | Action  | 應用場景 |
 |------|---------------------------------------|---------|------------|---------|----------|
-| 刪除 | HttpDelete /project/{projectId:int}/article?id=1,2,3 | Project | Article    | Remove  |          |
+| 刪除 | HttpDelete /project/{projectId:int}/article?id=1&id=2&id=3 | Project | Article    | Remove  |          |
 
 ## API 參數命名慣例
 
