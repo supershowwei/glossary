@@ -274,9 +274,9 @@
 |------|---------------------------------------|---------|------------|---------|----------|
 | 刪除 | HttpDelete /project/{projectId:int}/article?id=1&id=2&id=3 | Project | Article    | Remove  |          |
 
-## API 參數命名慣例
+## CRUD API 參數命名慣例
 
-| CRUD 動作       | 命名格式         | 命名範例                                                 | 適用情境                                                       |   |
+| 動作            | 命名格式         | 命名範例                                                 | 適用情境                                                       |   |
 |-----------------|------------------|----------------------------------------------------------|----------------------------------------------------------------|---|
 | Create          | CreateXXXInput   | CreateAccountInput<br />CreateArticleInput                    | 明確代表是新增資料（不涉及更新）                               |   |
 | Create / Update | SaveXXXInput     | SaveUserProfileInput<br />SavePhotographyPreferencesInput     | 用於新增或更新都可能的情境（多數一般表單）                     |   |
