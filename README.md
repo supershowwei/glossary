@@ -231,3 +231,13 @@
 | Read (List)     | XXXListFilter    | ArticleListFilter<br />UserListFilter                         | 針對列表查詢提供過濾條件（回傳部分資料的清單）                 |   |
 | Read (複數資源) | XXXFilter (複數) | ArticlesFilter<br />MembersFilter                             | 若資源本身語意為集合或明確強調複數                             |   |
 | Remove          | RemoveXXXCommand | RemoveAccountCommand<br />RemoveArticleCommand                | 用於需要傳遞刪除參數的 API（例如：POST /remove、DELETE /{id}） |   |
+
+## CRUD 頁面送出之前
+
+| 動作    | 命名範例    | 說明         |
+|---------|-------------|--------------|
+| edit    | editExif    | 進入編輯狀態 |
+| add     | addExif     | 新增         |
+| store   | storeExif   | 儲存         |
+| discard | discardExif | 刪除         |
+| revert  | revertExif  | 取消         |
